@@ -81,6 +81,7 @@ def start()
 	elsif next_move == "right"
 		cthulhu_room()
 	else
+		puts "Well, at least you tried."
 		dead("You stumble around the room until you starve")
 	end
 end
