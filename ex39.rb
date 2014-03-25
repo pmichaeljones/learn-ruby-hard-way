@@ -36,5 +36,29 @@ puts "Florida has: ", cities[states['Florida']]
 #puts every state abbreviation
 puts '-' * 10
 for state, abbrev in states
-	puts "#{state} has the city #{abbrev}."
+	puts "#{state} is abbreviated #{abbrev}."
 end
+
+#puts every city in every state
+puts '-' * 10
+for abbrev, city in cities
+	puts "#{abbrev} has the city #{city}."
+end
+
+#now do both at the same time
+puts '-' * 10
+for state, abbrev in states
+	puts "#{state} is abbreviated #{abbrev} and has the city #{cities[abbrev]}."
+end
+
+puts '-' * 10
+#if it's not there, you get nil
+state = states['Textas']
+
+if not state
+	puts "Sorry, no Texas."
+end
+
+# get a city with a default value
+city = cities['TX']  || 'Does Not Exist'
+puts "The city for the state 'TX' is: #{city}"
