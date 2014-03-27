@@ -6,6 +6,7 @@ class Game
 			"Nice job, you died...jackass.",
 			"Such a loser",
 			"I have a small puppy that's better at this."
+			"This is where I get really angry."
 		]
 		@start = start
 	end
@@ -68,7 +69,7 @@ class Game
 	def laser_weapon_armory()
 		puts "You get into the room and need to open a bomb hatch."
 		puts "The code is 3 numbers long."
-		code = "%s%s%s" % [rand(9)+1, rand(9)+1, rand(9)+1]
+		code = "%s%s%s" % [rand(1)+1, rand(1)+1, rand(1)+1]
 		print "[keypad]> "
 		guess = gets.chomp()
 		guesses = 0
